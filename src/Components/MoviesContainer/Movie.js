@@ -10,9 +10,11 @@ const Movie = ({movie}) => {
     const navigate = useNavigate();
     const {setMovie} = useMovie();
 
-    const toSelectedMovie = (id) => {
+
+    const toSelectedMovie = () => {
         setMovie(movie)
-        navigate(`/movie/${movie.id}`)
+        console.log(movie);
+        // navigate(`/movie/${movie.id}`)
     };
 
     return (
