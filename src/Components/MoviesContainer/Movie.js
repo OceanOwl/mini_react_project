@@ -14,8 +14,11 @@ const Movie = ({movie}) => {
     const toSelectedMovie = () => {
         setMovie(movie)
         console.log(movie);
-        // navigate(`/movie/${movie.id}`)
+        const {id} = movie;
+        console.log(id);
+        navigate(`${id}`)
     };
+
 
     return (
         <div className={css.Movie} onClick={toSelectedMovie}>

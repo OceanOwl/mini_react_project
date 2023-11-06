@@ -1,7 +1,7 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
 import {MainLayout} from "./Layouts";
-import {SingleMoviePage,MoviesPage} from "./Pages";
+import {SingleMoviePage, MoviesPage} from "./Pages";
 
 const router = createBrowserRouter([
     {
