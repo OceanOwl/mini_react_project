@@ -13,9 +13,7 @@ const Movie = ({movie}) => {
 
     const toSelectedMovie = () => {
         setMovie(movie)
-        console.log(movie);
         const {id} = movie;
-        console.log(id);
         navigate(`${id}`)
     };
 

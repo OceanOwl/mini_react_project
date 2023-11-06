@@ -9,16 +9,18 @@ const SelectedMovie = () => {
 
     const [selectedMovie, setSelectedMovie] = useState({});
 
-    useEffect(()=>{
-        movieService.getById(id).then(({data})=>setSelectedMovie(data))
-    },[])
+    useEffect(() => {
+        movieService.getById(id).then(({data}) => setSelectedMovie(data))
+    }, [])
 
     console.log(selectedMovie);
 
     return (
 
         <div>
-            SelectedMovie
+            {selectedMovie &&
+                <div>{selectedMovie.id}</div>
+            }
         </div>
     );
 };
