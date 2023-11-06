@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 
 import {movieService} from "../../Services/movieService";
 
-const SelectedMovie = () => {
+const SelectedMovie = ({movie}) => {
 
     const {id} = useParams();
 
@@ -19,7 +19,16 @@ const SelectedMovie = () => {
 
         <div>
             {selectedMovie &&
-                <div>{selectedMovie.id}</div>
+                <div>
+                    <div>{selectedMovie.id}</div>
+                    <div>
+                        <img src={"https://image.tmdb.org/t/p/w300" + selectedMovie.poster_path} alt={"img"}/>
+                    <div>{selectedMovie.title}</div>
+
+                    </div>
+
+                </div>
+
             }
         </div>
     );
