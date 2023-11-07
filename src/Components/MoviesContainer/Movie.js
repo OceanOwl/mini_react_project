@@ -5,14 +5,14 @@ import {useNavigate} from "react-router-dom";
 import {useMovie} from "../../hooks/useMovie";
 
 const Movie = ({movie}) => {
-    const {id, title, poster_path} = movie
+    const {title, poster_path} = movie
 
     const navigate = useNavigate();
     const {setMovie} = useMovie();
 
 
-    const toSelectedMovie = () => {
-        setMovie(movie)
+    const toSelectedMovie =async () => {
+        await setMovie(movie)
         const {id} = movie;
         navigate(`${id}`)
     };
