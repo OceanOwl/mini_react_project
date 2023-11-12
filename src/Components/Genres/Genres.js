@@ -9,9 +9,7 @@ const Genres = () => {
     useEffect(()=>{
         genresService.getAll().then(({data})=>setGenres(data))
     },[])
-    console.log(genres.genres);
-    // const array = genres.genres
-    // console.log(array);
+
 
 
     return (
